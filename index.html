@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAG Station Strategic - Supporting Business Transitions & Growth</title>
+    <meta name="description" content="Strategic advisory for family businesses, M&A transactions, and capital markets support. Your trusted partner for business transitions.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 80px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="30" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="70" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+        
+        .logo {
+            font-size: 3.5em;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .tagline {
+            font-size: 1.4em;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-text {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Navigation */
+        .nav-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #3498db;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .service-list {
+            list-style: none;
+            color: #666;
+        }
+        
+        .service-list li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .service-list li::before {
+            content: '▸';
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Why Choose Us */
+        .why-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .strength-item {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .strength-icon {
+            font-size: 3em;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .strength-item h4 {
+            font-size: 1.3em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .strength-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Industries */
+        .industries-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .industry-item {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .industry-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .industry-item h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .industry-item p {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        /* Contact */
+        .contact-section {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .contact-section p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .cta-button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .footer-text {
+            font-size: 0.9em;
+            color: #bdc3c7;
+        }
+        
+        .cycling-note {
+            font-size: 0.9em;
+            color: #95a5a6;
+            font-style: italic;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5em;
+            }
+            
+            .tagline {
+                font-size: 1.1em;
+            }
+            
+            .hero-text {
+                font-size: 1em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .strengths-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .industries-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">SAG</div>
+            <div class="tagline">Station Strategic</div>
+            <div class="hero-text">
+                Supporting Business Transitions & Growth
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="nav-section">
+        <div class="container">
+            <h2 class="section-title">When the journey gets challenging, every business needs a SAG station.</h2>
+            <p class="section-subtitle">
+                Just like cyclists rely on Support And Gear stops during long races, growing businesses and ownership transitions require experienced guides who understand both the strategic destination and the operational realities of getting there.
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Family Business Advisory</h3>
+                    <p>Navigating succession, professionalization, and generational transitions requires deep understanding of both family dynamics and business fundamentals. Our team brings 25+ years of experience building high-performance cultures and executing strategic transformations.</p>
+                    <ul class="service-list">
+                        <li>Succession planning and leadership transitions</li>
+                        <li>Organizational development and culture transformation</li>
+                        <li>Strategic restructuring and operational optimization</li>
+                        <li>Board governance and family office advisory</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>M&A Advisory</h3>
+                    <p>Complex transactions demand operators who have been in the seat. Our principals have led multiple acquisitions and divestitures totaling $70M+ across automotive, industrial, and specialty sectors.</p>
+                    <ul class="service-list">
+                        <li>Buy-side and sell-side transaction leadership</li>
+                        <li>Due diligence and valuation expertise</li>
+                        <li>Integration planning and execution</li>
+                        <li>Strategic positioning for optimal outcomes</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Capital Markets Support</h3>
+                    <p>Whether you're an independent sponsor, search fund operator, or PE portfolio company, operational excellence drives value creation. Our team combines hands-on CEO experience with proven expertise in performance turnarounds.</p>
+                    <ul class="service-list">
+                        <li>Search fund operations and deal sourcing</li>
+                        <li>PE portfolio company operating support</li>
+                        <li>Independent sponsor advisory and co-investment</li>
+                        <li>Value creation and exit preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-title">Why SAG Station Strategic</h2>
+            
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <div class="strength-icon">⚙️</div>
+                    <h4>Operational Depth</h4>
+                    <p>Built and led organizations with 200+ global employees, doubled operating EBITDA through strategic transformations across diverse industries.</p>
+                </div>
+                
+                <div class="strength-item">
+                    <div class="strength-icon">🤝</div>
+                    <h4>Transaction Experience</h4>
+                    <p>Direct experience executing complex M&A transactions, corporate restructurings, and strategic exits provides practical insight.</p>
+                </div>
+                
+                <div class="strength-item">
+                    <div class="strength-icon">📈</div>
+                    <h4>Commercial Expertise</h4>
+                    <p>Track record developing multiple brands generating $100M+ revenue, with expertise in international markets and pricing strategy.</p>
+                </div>
+                
+                <div class="strength-item">
+                    <div class="strength-icon">🎯</div>
+                    <h4>Proven Leadership</h4>
+                    <p>Experience managing through crisis, change, and growth while maintaining high engagement and delivering results ahead of schedule.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="industries-section">
+        <div class="container">
+            <h2 class="section-title">Industries We Serve</h2>
+            
+            <div class="industries-grid">
+                <div class="industry-item">
+                    <h4>Manufacturing & Distribution</h4>
+                    <p>Automotive, industrial equipment, and specialty products</p>
+                </div>
+                
+                <div class="industry-item">
+                    <h4>Specialty Materials</h4>
+                    <p>Performance chemicals and advanced materials</p>
+                </div>
+                
+                <div class="industry-item">
+                    <h4>Sustainable Technologies</h4>
+                    <p>Green tech, environmental solutions, and clean energy</p>
+                </div>
+                
+                <div class="industry-item">
+                    <h4>Consumer & Commercial Brands</h4>
+                    <p>DIY, retail, and industrial MRO channels</p>
+                </div>
+                
+                <div class="industry-item">
+                    <h4>Marine & Automotive</h4>
+                    <p>Fleet equipment, marine technologies, OEM suppliers, and aftermarket</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Ready to discuss your strategic challenge?</h2>
+                <p>
+                    Every business journey has its demanding climbs. Whether you're planning a succession, evaluating a transaction, or optimizing operations for growth, SAG Station Strategic provides the experienced support you need to reach your destination.
+                </p>
+                <a href="mailto:info@sagstation.com" class="cta-button">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    © 2025 SAG Station Strategic. All rights reserved.
+                </div>
+                <div class="cycling-note">
+                    SAG: Support And Gear - Your strategic support hub for business transitions
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
